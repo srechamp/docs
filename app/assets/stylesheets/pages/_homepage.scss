@@ -91,12 +91,11 @@
 .HomepageSection {
   &__heading {
     color: map-get($color-aliases, "text-lightest");
-    font-size: 0.888rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 500;
     letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-top: 60px;
-    padding-bottom: 10px;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
     text-transform: uppercase;
   }
 }
@@ -148,8 +147,7 @@
   &__heading {
     align-items: center;
     display: flex;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     grid-area: heading;
     line-height: map-get($line-heights, "heading");
     margin: 0;
@@ -167,8 +165,7 @@
 
   &__subtext {
     color: map-get($color-aliases, "text-lightest");
-    font-size: 0.888rem;
-    font-weight: 500;
+    font-size: 0.875rem;
     grid-area: subtext;
   }
 
@@ -196,13 +193,11 @@
 
   &__list {
     font-family: $font-family-base;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: map-get($line-heights, "heading");
   }
 
   &__list-item {
-    margin: 15px 0;
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
 
     &:first-child {
       margin-top: 0;
@@ -216,7 +211,6 @@
   &__list-item-link {
     @include _link-with-arrow;
     display: flex;
-    font-weight: 500;
 
     &::after {
       margin-left: auto;
