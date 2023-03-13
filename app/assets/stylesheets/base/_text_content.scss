@@ -1,26 +1,23 @@
-@mixin margin($margin: 1) {
-  margin-bottom: #{$margin}rem;
-  margin-top: #{$margin}rem;
-}
-
-@mixin heading($size-multiplier, $margin: 1) {
+@mixin heading(
+  $size-multiplier,
+  $font-family: $font-family-base,
+  $font-weight: 500
+) {
   clear: both;
   color: map-get($color-aliases, "text-display");
-  font-family: $font-family-display;
+  font-family: $font-family;
   font-size: #{$size-multiplier}rem;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: $font-weight;
   line-height: map-get($line-heights, "heading");
-
-  @include margin($margin);
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-  @include heading(3);
+  @include heading(3, $font-family-display, bold);
 }
 
 h2 {
-  @include heading(2);
+  @include heading(1.875);
 }
 
 h3 {
@@ -49,7 +46,7 @@ h6 {
   }
 
   p {
-    @include margin;
+    margin-bottom: 1.25rem;
   }
 
   blockquote,
