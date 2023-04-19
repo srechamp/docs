@@ -1,9 +1,14 @@
+.Products {
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+}
+
 .Products__row {
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-sm) {
     flex-direction: row;
   }
 }
