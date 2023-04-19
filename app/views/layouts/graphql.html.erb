@@ -6,15 +6,14 @@
   <body <%= beta? ? 'class=beta' : ''-%>>
     <%= render "site_header", use_nav: "nav_graphql" %>
     <main id="main" role="main">
-      <div class="Docs__page-container StandardWhiteContentPage">
-        <div class="Docs__page-container__inner PageContainer">
-          <div class="Docs__article">
-            <%= yield :toc %>
-            <div class="TextContent">
-              <%= yield %>
-            </div>
-            <%= render "footer", :embed_emojicom => true %>
-        </div>
+      <div class="PageContainer">
+        <article class="Docs__article">
+          <%= yield :toc %>
+          <div class="TextContent">
+            <%= yield %>
+          </div>
+          <%= render "footer", :embed_emojicom => true %>
+        </article>
       </div>
     </main>
     <%= render "algolia" %>

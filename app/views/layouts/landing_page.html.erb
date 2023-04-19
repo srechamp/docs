@@ -6,15 +6,13 @@
   <body <%= beta? ? 'class=beta' : ''-%>>
     <%= render "site_header" %>
     <main id="main" role="main">
-      <div class="Docs__page-container StandardWhiteContentPage">
-        <div class="Docs__page-container__inner PageContainer">
-          <div class="Docs__article Docs__article--is-landing-page">
-              <div class="TextContent">
-                <%= yield %>
-              </div>
-              <%= render "footer", :embed_emojicom => false %>
-            </div>
-        </div>
+      <div class="PageContainer">
+        <article class="Docs__article Docs__article--is-landing-page">
+          <div class="TextContent">
+            <%= yield %>
+          </div>
+          <%= render "footer", :embed_emojicom => false %>
+        </article>
       </div>
     </main>
     <%= render "algolia" %>

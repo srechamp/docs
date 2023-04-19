@@ -1,22 +1,5 @@
-$color-green: rgb(3, 165, 98);
-
-.Docs__page-container {
-  @media (min-width: $screen-md) {
-    padding-top: map-get($header-height, "two-rows") + 30px;
-  }
-
-  @media (min-width: $screen-lg) {
-    padding-top: map-get($header-height, "one-row") + 30px;
-  }
-}
-
-.Docs__page-container__inner {
-  margin-top: 15px;
-
-  @media (min-width: $screen-md) {
-    display: flex;
-    margin-top: 0;
-  }
+@mixin margin-left-sidebar {
+  margin-left: $sidebar-width + ($gutter / 2);
 }
 
 .Docs__header {
@@ -30,22 +13,20 @@ $color-green: rgb(3, 165, 98);
   font-weight: 400;
 
   @media (min-width: $screen-md) {
-    margin-left: $sidebar-width + ($gutter / 2);
-    margin-top: map-get($header-height, "two-rows") - 24px;
+    @include margin-left-sidebar;
+    margin-top: 44px;
   }
 
   @media (min-width: $screen-lg) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: map-get($header-height, "one-row") - 24px;
-    max-width: map-get($max-w, "prose");
+    @include container("prose");
+    margin-top: 30px;
   }
 
   &--is-landing-page {
     max-width: none;
 
     @media (min-width: $screen-md) {
-      margin-left: $sidebar-width + ($gutter / 2);
+      @include margin-left-sidebar;
     }
   }
 
