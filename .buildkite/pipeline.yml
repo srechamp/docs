@@ -23,6 +23,7 @@ steps:
       - docker-compose#v3.9.0:
           run: app
           env:
+            - RAILS_MASTER_KEY
             - RAILS_ENV=production
 
   - label: ":spider: muffet"
